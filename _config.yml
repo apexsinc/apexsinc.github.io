@@ -1,0 +1,149 @@
+# Site settings
+head_title: Apexvalue | We put technology to work for you!
+email:       contact@apexvalue.com
+name:        Apexvalue
+author:      Apexs, Inc.
+description: Paweł Urbanek - Full Stack web development, consultant, specializing in Ruby on Rails and JavaScript. Experienced in building scalable and performant APIs for startups and refactoring legacy codebases. Blogging about web developer stuff.
+keywords: Ruby on Rails, JavaScript, full stack,
+ consultant, web development, remote developer, startup, performance, optimization, blogger, blog, blogging, SEO
+baseurl:     ""
+date_format: "%b %-d, %Y"
+structured_date_format: '%Y-%m-%d'
+email_subscription_link: https://mailchimp.com/
+header_pages:
+ - pages/about.md
+ - pages/products.md
+ - pages/contact.html
+ - pages/customers.html
+
+# Google services
+google_verification: mkOYZKbYfQkSPJvk8Hk7Se7H1EBHmYXxBEzwLz7lCTE
+norton_verification: eb8u-o0zagay9cuxjcbbcizgj10lmr4dzyngckwygpbawz3a6ozzv5k8in8pit-v5aok2cry2fiu00ozro0uvqnal-atrtxnt3s2b9-kv2hx2np2dl5fh5bdtgodg1z-
+pinterest_verification: a301d47c11c70aace805172121053883
+yandex_verification: 356b86ad095d2e11
+bing_verification: A83C16EEE1D52C664CF9FEC0BD96A366
+# Use either direct GA implementation or set up GTM account
+# - using both will skew your data (leave blank to not use at all)
+google_tag_manager:
+
+# Optional features
+animated:             false
+show_post_footers:    true
+show_social_icons:    true
+# Preview image for social media aka og:image and twitter:image
+post_preview_image: false
+
+# Disqus post comments
+# (leave blank to disable Disqus)
+disqus_shortname: apexvalue
+
+# Social icons
+fbmessenger_username: apexvalue
+twitter_username: 
+linkedin_username:
+medium_id:
+flattr_button:
+
+# Post sharing icons
+show_sharing_icons: true
+# Change to 'true' to enable individual icons
+share_twitter: true
+share_facebook: true
+
+text:
+  pagination:
+    newer: 'Newer'
+    older: 'Older'
+  share_buttons:
+    text:         'Share:'
+    twitter:      'Share on Twitter'
+    facebook:     'Share on Facebook'
+  post:
+    updated:        'Updated'
+    minute_read:    'minute read'
+    related_posts:  'Related Posts'
+  index:
+    coming_soon: 'Coming soon...'
+  contact:
+    email:    ''
+    content:  ''
+    subject:  'New submission!'
+    submit:   'Send'
+    ajax:
+      sending:  'sending..'
+      sent:     'Message sent!'
+      error:    'Error!'
+  og_locale: 'en_US'
+
+# Build settings
+markdown:     kramdown
+redcarpet:
+  extensions: ['smart', 'tables', 'with_toc_data']
+permalink: /:categories/:title
+paginate:     9
+sass:
+  style: compressed
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-assets
+  - jekyll-archives
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - deploy.sh
+  - certificates.tar
+  - app-nginx.conf.sigil
+  - purge.rb
+  - CHECKS
+  - app.json
+  - .env
+
+defaults:
+  - scope:
+      path: 'files/*.pdf'
+    values:
+      sitemap: false
+  - scope:
+      path: 'build/'
+    values:
+      sitemap: false
+assets:
+  defaults:
+    js: { integrity: false }
+    css: { integrity: false }
+    img: { integrity: false }
+  digest: true
+  sources:
+    - _assets/css
+    - _assets/css/scss
+    - _assets/images/shared
+    - _assets/images/1998
+    - _assets/images/1999
+    - _assets/images/2000
+    - _assets/images/2001
+    - _assets/images/2002
+    - _assets/images/2003
+    - _assets/images/2004
+    - _assets/images/2005
+    - _assets/images/2006
+    - _assets/images/2007
+    - _assets/images/2008
+    - _assets/images/2009
+    - _assets/images/2010
+    - _assets/images/2011
+    - _assets/images/2012
+    - _assets/images/2013
+    - _assets/images/2014
+    - _assets/images/2015
+    - _assets/images/2016
+    - _assets/images/2017
+    - _assets/images/2018
+    - _assets/images/2019
+    - _assets/images/2020
+    - _assets/images/2021
+    - _assets/images/2022
+    - _assets/images/2023
+    - _assets/images/2024
+    - _assets/images/2025
