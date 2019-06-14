@@ -4,54 +4,66 @@ preview_image: pawel-tag.jpg
 meta_robots: index,follow
 meta_description: At Apexvalue, we put technology to work for you. We market weather, automotive, gps and miscellaneous products.
 ---
+{% assign posts_count = paginator.posts | size %}
 
-{% if page.url == '/' %}
-<div class="homepage">
-<h2 class="text-center">Start Here</h2>
-<div class="mainbox">
-    
-    <a class="post-link-index" href="/jekyll-tutorials/">
-          <div class="card">
-                 <img alt="Jekyll Tutorials" class="post-image-index" src="/thumbs-small/jekyll-tutorial.png" width="300" height="188" />
-                <div class="card-footer">
-                    <h2 class="post-index-title">Jekyll Basics</h2>
-                    <hr>
-                     <p class="post-excerpt">Learn how to host a website and blogs using Github Pages and Jekyll.</p>
-               </div>
-           
-        </div> 
-     </a>
-    
-    
-    
-    
-        
-    <a class="post-link-index" href="/videos/">
-          <div class="card">
-                 <img alt="Jekyll Video Tutorials" class="post-image-index" src="/thumbs-small/jekyll-video-tutorials.png" width="300" height="188" />
-                <div class="card-footer">
-                    <h2 class="post-index-title">Videos</h2>
-                    <hr>
-                     <p class="post-excerpt">Many of our articles are in video format. Watch them here.</p>
-               </div>
-           
-        </div> 
-     </a>
-    
-        
-        
-    <a class="post-link-index" href="/wordpress-to-jekyll-migration/">
-          <div class="card">
-                 <img alt="Wordpress to Jekyll migration" class="post-image-index"  src="/thumbs-small/wordpress-to-jekyll-migration.png" width="300" height="188" />
-                <div class="card-footer">
-                    <h2 class="post-index-title">Wordpress to Jekyll</h2>
-                    <hr>
-                     <p class="post-excerpt">Migrating from Wordpress to Jekyll can be a tedious job. Hire me to do that.</p>
-               </div>
-           
-        </div> 
-     </a>
-    
-    
+{% assign index = 0 %}
+
+<script>
+(function () {
+  var urls = []
+  var preloaded = []
+  {% for post in paginator.posts %}
+      {% assign index=index | plus:1 %}
+      var index = {{ index }}
+      var postUrl = "{{ post.url }}"
+      urls.push(postUrl)
+  {% endfor %}
+  preloaded.push(urls[0])
+  preloaded.push(urls[1])
+  var preload = function(url) {
+    if(url === undefined) {
+      return;
+    }
+    if(preloaded.includes(url)) {
+      return;
+    }
+    var preloadLink = document.createElement("link");
+    preloadLink.setAttribute("rel", "prefetch");
+    preloadLink.setAttribute("href", url);
+    document.getElementsByTagName("head")[0].appendChild(preloadLink);
+    preloaded.push(url);
+  }
+  window.onscroll = function() {
+    var preloadIndex = parseInt(window.scrollY / 300)
+    preload(urls[preloadIndex]);
+  }
+})();
+</script>
+
+<div class="home">
+  {% if posts_count > 0 %}
+    {% include pagination.html %}
+    <div class="posts">
+      {% for post in paginator.posts %}
+        <div class="post py3">
+          <p class="post-meta"><span class='theme-color'>{{ post.date | date: site.date_format }} &nbsp;</span><span class="disqus-comment-count" data-disqus-identifier="{{ post.id }}"></span></p>
+          <a href="{{ post.url | prepend: site.baseurl }}" class="post-link"><h2 class="h1 post-title">{{ post.title }}</h2></a>
+          <span class="post-summary">
+            {% if post.summary %}
+              {{ post.summary }}
+            {% else %}
+              {{ post.excerpt }}
+            {% endif %}
+          </span>
+        </div>
+      {% endfor %}
     </div>
-</div>  
+
+    <br>
+    {% include pagination.html %}
+  {% else %}
+    <h1 class='center'>{{ site.text.index.coming_soon }}</h1>
+  {% endif %}
+</div>
+
+<script id="dsq-count-scr" src="//{{ site.disqus_shortname }}.disqus.com/count.js" async></script>
