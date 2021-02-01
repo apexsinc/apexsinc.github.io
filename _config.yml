@@ -147,3 +147,4 @@ assets:
     - _assets/images/2023
     - _assets/images/2024
     - _assets/images/2025
+theme: jekyll-theme-cayman
