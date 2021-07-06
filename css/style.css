@@ -7,6 +7,7 @@ Do not remove the back-link in this web template
 
 @import url('http://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:400,600,700'); 
 @import url('font-awesome.css');  
+@import url('custom-fonts.css'); 
 @import url('animate.css');
 
 body {
@@ -465,7 +466,7 @@ border-radius:0;
 .testimonial-area {
 padding: 0 0 0 0;
 margin:0;
-background: url(../img/low-poly01.jpg) fixed center center;
+background: url(../img/reviews.jpg) fixed center center;
 background-size: cover;
 -webkit-background-size: cover;
 -moz-background-size: cover;
@@ -836,8 +837,8 @@ ul.portfolio-categ li a{
 	color: #14A085;
 }
 ul.portfolio-categ li.active{
-border: 1px solid #D7D8D6;
-background-color: #EAEAEA;
+border: 1px solid #D7D8D6;
+background-color: #EAEAEA;
 }
 ul.portfolio-categ li.active a:hover, ul.portfolio-categ li a:hover,ul.portfolio-categ li a:focus,ul.portfolio-categ li a:active {
 	text-decoration:none;
@@ -1762,4 +1763,11 @@ padding:50px 0
     margin: 0;
     padding: 22px 0 14px;
     font-size: 18px;
+}
+.service-icon {
+    float: left;
+    margin: 0 15px 0 0;
+    padding: 0;
+    font-size: 53px;
+    color: #4f7bb1;
 }
