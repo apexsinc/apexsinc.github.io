@@ -13,6 +13,7 @@
 <link href="css/flexslider.css" rel="stylesheet" />
 <link href="css/style.css" rel="stylesheet" />
 <link href="css/all.css" rel="stylesheet" />
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125791568-1"></script>
 <script>
@@ -64,7 +65,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
-				<h2 class="pageTitle">Contact Us</h2>
+				<h2 class="pageTitle">Thank you for your sending inquiry/contact.</h2>
 			</div>
 		</div>
 	</div>
@@ -72,82 +73,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<section id="content">
 	
 	<div class="container">
-		<div class="row">
-	 		<div class="col-md-12">
-							 
-	 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44413.63965317358!2d123.96405223086454!3d10.289901714708524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a990caa0952b2b%3A0x843b757d8b0910a6!2sApplied%20Expert%20Systems%20and%20Software%20Inc!5e0!3m2!1sen!2sph!4v1625547458529!5m2!1sen!2sph" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
-
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-6">
-				<br>
-				<div class="alert alert-success hidden" id="contactSuccess">
-					<strong>Success!</strong> Your message has been sent to us.
-				</div>
-				<div class="alert alert-error hidden" id="contactError">
-					<strong>Error!</strong> There was an error sending your message.
-				</div>
-				<div class="contact-form">
-					
-					<form id="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLScEuwy9ObVNnageZy1VJd-fAV0G3_YEeZ5nEuvEenQTgXjV7g/formResponse"
-				      target="_self"
-				      id="bootstrapForm"
-				      method="POST">
-						<div class="form-group has-feedback">
-							<label for="1147071294">Name*</label>
-							<input id="1787227625" type="text" name="entry.1787227625" class="form-control" required>
-							<i class="fa fa-user form-control-feedback"></i>
-						</div>
-						<div class="form-group has-feedback">
-							<label for="1655306452">Email*</label>
-							<input id="961508263" type="text" name="entry.961508263" class="form-control" required>
-							<i class="fa fa-envelope form-control-feedback"></i>
-						</div>
-						<div class="form-group has-feedback">
-							<label for="1175172858">Subject*</label>
-							<input id="213258230" type="text" name="entry.213258230" class="form-control" required>
-							<i class="fa fa-navicon form-control-feedback"></i>
-						</div>
-						<div class="form-group has-feedback">
-							<label for="1437290565">Message*</label>
-							<textarea id="857810034" name="entry.857810034" class="form-control" rows="6" required></textarea>
-							<i class="fa fa-pencil form-control-feedback"></i>
-						</div>
-						<div class="form-group has-feedback">
-							<label for="347078287">Please confirm these to complete this contact form</label><br>
-							<input type="checkbox" name="entry.406510195" value="I declare under penalty of perjury that all of the information provided above is accurate." required> I declare under penalty of perjury that all of the information provided above is accurate.
-							<i class="fa fa-pencil form-control-feedback"></i>
-						</div>
-						<input type="hidden" name="fvv" value="1">
-    					<input type="hidden" name="fbzx" value="5573661913841077541">
-    					<input type="hidden" name="pageHistory" value="0">
-    					<input class="btn btn-default" type="submit" value="Submit">
-					</form>
-				</div>
-			</div>
-			<div class="col-md-6">		
-				<div class="span4">
-					<div class="title-box clearfix ">
-						<h3 class="title-box_primary">Contact info</h3>
-					</div> 
-					<h5>Please fill in the information form, and our team will respond as soon as possible.</h5>
-					<p>APEXS, Incorporated has a long and proud history and emerged as the preferred partner of leading institutions, colleges, universities, beach resort, mining and local government in the Philippines.<br>
-					</p>
-					<address>
-						<strong>Applied Expert Systems and Software Inc. (APEXS, Inc.)</strong><br>
-						<i>Suite 714, EGI City By The Sea,<br>
-						Maribago, Lapu-Lapu City, Cebu,<br>
-						6015, Philippines.</i><br>
-						Telephone: +63 32 268 6937<br>
-						FAX: +63 32 495 2106<br>
-						E-mail: <a href="mailto:inquire@apexsinc.com">inquire@apexsinc.com</a><br>
-					</address> 
-				</div> 
-			</div>
-		</div>
+		
+		<p>Your inquiry/contact message has been submitted. Our team will respond you as soon as posibble.</p>
+		<br/>
 	</div>
  
 	</section>
@@ -247,10 +175,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script type="text/javascript">
 	// This script requires jQuery and jquery-form plugin
-	// You can use these ones from Cloudflare CDN:
-	
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
-	//
 $('#bootstrapForm').submit(function (event) {
     event.preventDefault()
     var extraData = {}
@@ -260,9 +184,9 @@ $('#bootstrapForm').submit(function (event) {
         error: function () {
             // Submit of form should be successful but JSONP callback will fail because Google Forms
             // does not support it, so this is handled as a failure.
-           // alert('Form Submitted. Thanks.')
+            alert('Form Submitted. Thanks.')
             // You can also redirect the user to a custom thank-you page:
-             window.location = 'https://www.apexsinc.com/contact-thankyoupage.html'
+             window.location = 'http://www.mydomain.com/thankyoupage.html'
         }
     })
 })
